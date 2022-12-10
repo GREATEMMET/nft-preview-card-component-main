@@ -40,9 +40,6 @@ body {
   font-family: var(--ff);
 }
 
-div {
-}
-
 .container {
   background-color: var(--bg-card);
   width: 375px;
@@ -66,6 +63,24 @@ div {
   top: 50%;
   left: 50%;
   transform: translate(-24px, -24px);
+  display: none;
+}
+
+.eth-img:active .overlay {
+  content: "";
+  border: 1px solid red;
+  background-color: var(--active);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.eth-img:active svg {
+  display: block;
+  color: var(--active);
 }
 
 .content-box img {
@@ -77,6 +92,10 @@ figure + h1 {
   font-size: 26px;
   color: var(--white);
   margin-block: 20px;
+}
+
+figure + h1:active {
+  color: var(--active);
 }
 
 figure + h1 + p {
@@ -96,6 +115,7 @@ figure + h1 + p {
 .eth-time {
   font-size: 18px;
   display: flex;
+  align-items: center;
 }
 
 .eth-price p {
